@@ -7,7 +7,9 @@ endif
 " Extends zsh syntax highlight
 runtime! syntax/zsh.vim
 
-syn match zplugTags     "\(as\|at\|commit\|depth\|dir\|do\|file\|from\|frozen\|hook-build\|hook-load\|if\|ignore\|lazy\|nice\|of\|on\|rename-to\|use\)\ze:" display
+syntax iskeyword @,48-57,192-255,$,_,:,-
+
+syn match zplugTags     "\(as\|at\|commit\|depth\|dir\|do\|file\|from\|frozen\|hook-build\|hook-load\|if\|ignore\|lazy\|nice\|of\|on\|rename-to\|use\)\ze:"
 syn match zplugCommands "\<\%(zplug\|check\|clean\|clear\|info\|install\|list\|load\|status\|update\)\>[?!']\@!" display
 
 hi def link zplugCommands  Statement
